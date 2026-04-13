@@ -5,19 +5,16 @@ Outputs a CSV where each row is one simulation and each column is a parameter.
 """
 
 import os
-import sys
 import yaml
 import pandas as pd
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..'))
-from config.config_helper import Config
-
+from TPED.config.config_helper import Config
 from mgkdb.support.mgk_login import f_login_dbase
 
 
 LOOKUP_FILE = os.path.join(os.path.dirname(__file__), 'MGKDB_parameter_lookup.yaml')
 OUTPUT_FILE = os.path.join(os.path.dirname(__file__), '..', 'analysis', 'parameter_scan.csv')
-COLLECTIONS  = ['LinearRuns', 'NonlinRuns']
+COLLECTIONS = ['LinearRuns']
 
 
 def load_lookup(path):
@@ -128,18 +125,18 @@ def extract_params(record, lookup):
 
 def main():
     config = Config()
-    auth = config.get_path('MGKBD_AUTH')
+    auth = config.get_path('MGKDB_AUTH_PKL')
     lookup = load_lookup(LOOKUP_FILE)
 
     login = f_login_dbase(auth)
-    database = login.connect()
+    client, database = login.connect()
 
     # Only pull the gyrokineticsIMAS field — no files
     projection = {'gyrokineticsIMAS': 1, 'gyrokinetics': 1, 'Metadata.CodeTag': 1}
 
     rows = []
     for col_name in COLLECTIONS:
-        collection = getattr(database, col_name)
+        collection = database[col_name]
         total = collection.count_documents({})
         print(f'{col_name}: {total} records')
         for record in collection.find({}, projection):
