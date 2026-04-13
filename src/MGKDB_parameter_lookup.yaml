@@ -1,0 +1,108 @@
+# MGKDB Parameter Lookup Table
+# db_field follows the GKDB standard stored under gyrokinetics.* in both LinearRuns and NonlinRuns.
+# Species arrays: species[e] = electron (charge=-1), species[i] = main ion, species[z] = impurity.
+# db_field: null means the quantity is not in the GKDB dict and must be derived or is unavailable for all codes.
+
+- parameter_name: Beta
+  db_field: gyrokinetics.species_all.beta_reference
+  explanation: Ratio of plasma kinetic pressure to magnetic pressure
+
+- parameter_name: q
+  db_field: gyrokinetics.flux_surface.q
+  explanation: Safety factor
+
+- parameter_name: collisionality_elec
+  db_field: gyrokinetics.collisions.collisionality_norm[e][e]
+  explanation: Normalized electron-electron collision frequency
+
+- parameter_name: collisionality_ions
+  db_field: gyrokinetics.collisions.collisionality_norm[i][i]
+  explanation: Normalized ion-ion collision frequency
+
+- parameter_name: s-hat
+  db_field: gyrokinetics.flux_surface.magnetic_shear_r_minor
+  explanation: "Magnetic shear = (r/q)(dq/dr)"
+
+- parameter_name: temp_grad_elec
+  db_field: gyrokinetics.species[e].temperature_log_gradient_norm
+  explanation: Normalized electron temperature gradient = a/L_Te
+
+- parameter_name: temp_grad_ion
+  db_field: gyrokinetics.species[i].temperature_log_gradient_norm
+  explanation: Normalized ion temperature gradient = a/L_Ti
+
+- parameter_name: dens_grad_elec
+  db_field: gyrokinetics.species[e].density_log_gradient_norm
+  explanation: Normalized electron density gradient = a/L_ne
+
+- parameter_name: dens_grad_ion
+  db_field: gyrokinetics.species[i].density_log_gradient_norm
+  explanation: Normalized ion density gradient = a/L_ni
+
+- parameter_name: radial_position
+  db_field: null
+  explanation: Radial location of the flux tube (r/a or rho_tor); not stored in GKDB dict
+
+- parameter_name: impurity_density
+  db_field: gyrokinetics.species[z].density_norm
+  explanation: Impurity density normalized to reference density
+
+- parameter_name: impurity_charge
+  db_field: gyrokinetics.species[z].charge_norm
+  explanation: Impurity charge number Z
+
+- parameter_name: Zeff
+  db_field: gyrokinetics.species_all.zeff
+  explanation: "Effective charge = sum(ni*Zi^2) / ne"
+
+- parameter_name: triangularity
+  db_field: gyrokinetics.flux_surface.triangularity_upper
+  explanation: Flux surface triangularity (same value stored for upper and lower in Miller geometry)
+
+- parameter_name: elongation
+  db_field: gyrokinetics.flux_surface.elongation
+  explanation: Flux surface elongation kappa
+
+- parameter_name: squareness
+  db_field: null
+  explanation: Flux surface squareness; not stored in GKDB dict
+
+- parameter_name: alpha_MHD
+  db_field: gyrokinetics.flux_surface.pressure_gradient_norm
+  explanation: "Normalized MHD pressure gradient alpha = -q^2 * R * (dbeta/dr)"
+
+- parameter_name: aspect_ratio
+  db_field: null
+  explanation: "Inverse aspect ratio eps = r/R; derivable from r_minor_norm = r/R0"
+
+- parameter_name: Ti_over_Te
+  db_field: "gyrokinetics.species[i].temperature_norm / gyrokinetics.species[e].temperature_norm"
+  explanation: Ion to electron temperature ratio; derived from per-species temperature fields
+
+- parameter_name: ky
+  db_field: gyrokinetics.wavevector[0].binormal_component_norm
+  explanation: Normalized binormal wavenumber k_y * rho_s
+
+- parameter_name: rho_star
+  db_field: null
+  explanation: "Normalized Larmor radius rho* = rho_i/a; not stored in GKDB dict"
+
+- parameter_name: elec_skin_depth
+  db_field: null
+  explanation: "Electron skin depth d_e = c/omega_pe; derived quantity, not stored directly"
+
+- parameter_name: lambda_debye
+  db_field: gyrokinetics.species_all.debye_length_reference
+  explanation: Normalized Debye length
+
+- parameter_name: mass_ratio
+  db_field: "gyrokinetics.species[i].mass_norm / gyrokinetics.species[e].mass_norm"
+  explanation: Ion to electron mass ratio; derived from per-species mass fields
+
+- parameter_name: major_radius
+  db_field: null
+  explanation: Major radius R of the device; not stored in GKDB dict
+
+- parameter_name: minor_radius
+  db_field: null
+  explanation: Minor radius a of the last closed flux surface; not stored in GKDB dict
