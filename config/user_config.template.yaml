@@ -1,0 +1,6 @@
+# User Configuration Template
+# Copy to user_config.yaml and modify with your paths
+
+# External tool and files
+MGKBD_AUTH: "path/to/db_credentials.pkl"
+MGKDB_PATH: "path/to/MGKDB_repo"
