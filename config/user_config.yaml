@@ -1,6 +1,0 @@
-# User Configuration Template
-# Copy to user_config.yaml and modify with your paths
-
-# External tool and files
-MGKBD_AUTH: "/global/homes/j/joeschm/projects/MGKDB_projects/joeschm_credentials/20251111_db_credentials.pkl"
-MGKDB_PATH: "/global/homes/j/joeschm/tools/MGKDB"
