@@ -76,11 +76,16 @@
   explanation: "Inverse aspect ratio eps = r/R; derivable from r_minor_norm = r/R0"
 
 - parameter_name: Ti_over_Te
-  db_field: "gyrokinetics.species[i].temperature_norm / gyrokinetics.species[e].temperature_norm"
-  explanation: Ion to electron temperature ratio; derived from per-species temperature fields
+  db_field:
+    - gyrokinetics.species[i].temperature_norm
+    - gyrokinetics.species[e].temperature_norm
+  derived: "fields[0] / fields[1]"
+  explanation: Ion to electron temperature ratio
 
 - parameter_name: ky
-  db_field: gyrokinetics.wavevector[0].binormal_component_norm
+  db_field:
+    - gyrokinetics.linear.wavevector[0].binormal_wavevector_norm
+    - gyrokinetics.wavevector[0].binormal_component_norm
   explanation: Normalized binormal wavenumber k_y * rho_s
 
 - parameter_name: rho_star
@@ -95,9 +100,9 @@
   db_field: gyrokinetics.species_all.debye_length_reference
   explanation: Normalized Debye length
 
-- parameter_name: mass_ratio
-  db_field: "gyrokinetics.species[i].mass_norm / gyrokinetics.species[e].mass_norm"
-  explanation: Ion to electron mass ratio; derived from per-species mass fields
+# - parameter_name: mass_ratio
+#   db_field: "gyrokinetics.species[i].mass_norm / gyrokinetics.species[e].mass_norm"
+#   explanation: Ion to electron mass ratio; derived from per-species mass fields
 
 - parameter_name: major_radius
   db_field: null

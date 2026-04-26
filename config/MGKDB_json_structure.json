@@ -1,0 +1,4581 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "_id",
+    "Diagnostics",
+    "Files",
+    "gyrokineticsIMAS",
+    "Metadata"
+  ],
+  "properties": {
+    "_id": {
+      "$ref": "#/$defs/ObjectId"
+    },
+    "Diagnostics": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "Amplitude Spectra": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "field": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Field Mom Snapshots": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Flux Spectra": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Grid": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "mom": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "omega": {
+          "anyOf": [
+            {
+              "type": "object",
+              "required": [
+                "gamma",
+                "ky",
+                "omega"
+              ],
+              "properties": {
+                "gamma": {
+                  "$ref": "#/$defs/Double"
+                },
+                "ky": {
+                  "$ref": "#/$defs/Double"
+                },
+                "omega": {
+                  "$ref": "#/$defs/Double"
+                }
+              }
+            },
+            {
+              "$ref": "#/$defs/ObjectId"
+            }
+          ]
+        },
+        "Shearing Rate": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Time": {
+          "$ref": "#/$defs/ObjectId"
+        }
+      }
+    },
+    "Files": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "132543_0_99_omte0_8_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_8_omti0_8_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_8_omti0_9_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_8_omti1_2_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_95_omti0_9_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_95_omti1_1_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_95_omti1_2_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_9_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_9_omti0_8_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_9_omti0_9_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_9_omti1_1_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte0_9_omti1_2_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_05_omti0_8_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_05_omti0_9_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_05_omti1_1_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_05_omti1_2_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_1_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_1_omti0_8_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_1_omti0_9_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omte1_1_omti1_2_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "132543_0_99_omti1_1_256_CHEASE_eqdsk": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "autopar": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ObjectId"
+            },
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "codemods": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "$ref": "#/$defs/ObjectId"
+            }
+          ]
+        },
+        "DIIID153764_omt0p7_omne0p7": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p7_omne0p8": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p7_omne0p9": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p7_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p8_omne0p8": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p8_omne0p9": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p8_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p8_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p9_omne0p9": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p9_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt0p9_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt1p0_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt1p0_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID153764_omt1p1_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p7_omne0p7": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p7_omne0p8": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p7_omne0p9": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p7_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p8_omne0p8": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p8_omne0p9": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p8_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p8_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p9_omne0p9": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p9_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt0p9_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt1p0_omne1p0": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt1p0_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "DIIID174082_omt1p1_omne1p1": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "energy": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "eqdisk_id": {
+          "type": "string"
+        },
+        "g132543_00700": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "g162940_02944_670": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "geneerr": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ObjectId"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "Gfile_gene_profiles_eD162940_alpha0_7_omne_x0_1_0_alpha0_7_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha0_8_omne_x0_1_0_alpha0_7_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha0_8_omne_x0_1_0_alpha0_8_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha0_9_omne_x0_1_0_alpha0_7_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha0_9_omne_x0_1_0_alpha0_8_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha0_9_omne_x0_1_0_alpha0_9_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha1_1_omne_x0_1_0_alpha0_8_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha1_1_omne_x0_1_0_alpha0_9_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_gene_profiles_eD162940_alpha1_1_omne_x0_1_0_alpha1_1_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p7_omne0p7_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p7_omne0p8_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p7_omne0p9_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p7_omne1p0_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p8_omne0p8_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p8_omne0p9_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p8_omne1p0_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p8_omne1p1_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p9_omne0p9_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p9_omne1p0_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt0p9_omne1p1_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt1p0_omne1p0_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt1p0_omne1p1_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "gfile_omt1p1_omne1p1_with_pb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_profiles_e_alpha0_8_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_profiles_e_alpha0_9_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_profiles_e_alpha1_1_omne": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "Gfile_profiles_e_alpha1_1_omt": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "input_cgyro": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "input_cgyro_gen": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "input_gacode": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ObjectId"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "magn_geometry": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "nrg": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_8_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_8_omti0_8_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_8_omti0_9_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_8_omti1_2_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_95_omti0_9_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_95_omti1_1_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_95_omti1_2_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_9_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_9_omti0_8_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_9_omti0_9_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_9_omti1_1_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte0_9_omti1_2_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_05_omti0_8_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_05_omti0_9_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_05_omti1_1_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_05_omti1_2_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_1_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_1_omti0_8_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_1_omti0_9_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omte1_1_omti1_2_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTX132543_0_99_omti1_1_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "NSTXU132543_iterdb": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "omega": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/ObjectId"
+            },
+            {
+              "type": "string"
+            }
+          ]
+        },
+        "out_cgyro_info": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "parameters": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "quantity_info_NC": {
+          "$ref": "#/$defs/ObjectId"
+        },
+        "s_alpha": {
+          "type": "string"
+        },
+        "scan_id": {
+          "type": "string"
+        },
+        "submit_id": {
+          "type": "string"
+        },
+        "tracer_efit": {
+          "$ref": "#/$defs/ObjectId"
+        }
+      }
+    },
+    "gyrokineticsIMAS": {
+      "type": "object",
+      "required": [
+        "code",
+        "collisions",
+        "flux_surface",
+        "ids_properties",
+        "model",
+        "species",
+        "species_all"
+      ],
+      "properties": {
+        "code": {
+          "type": "object",
+          "required": [
+            "name",
+            "parameters",
+            "version"
+          ],
+          "properties": {
+            "commit": {
+              "type": "null"
+            },
+            "description": {
+              "type": "string"
+            },
+            "library": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "commit",
+                  "description",
+                  "max_repr_length",
+                  "name",
+                  "parameters",
+                  "repository",
+                  "version"
+                ],
+                "properties": {
+                  "commit": {
+                    "type": "string"
+                  },
+                  "description": {
+                    "type": "string"
+                  },
+                  "max_repr_length": {
+                    "type": "integer"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "parameters": {
+                    "type": "string"
+                  },
+                  "repository": {
+                    "type": "string"
+                  },
+                  "version": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "output_flag": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "parameters": {
+              "anyOf": [
+                {
+                  "type": "object",
+                  "required": [
+                    "adapt_lx",
+                    "beta",
+                    "Bref",
+                    "calc_dt",
+                    "charge1",
+                    "coll",
+                    "collision_op",
+                    "comp_type",
+                    "debye2",
+                    "dens1",
+                    "diagdir",
+                    "dpdx_pm",
+                    "dpdx_term",
+                    "dt_max",
+                    "ENDIANNESS",
+                    "ExBrate",
+                    "GIT_BRANCH",
+                    "GIT_MASTER",
+                    "hyp_z",
+                    "init_cond",
+                    "init_time",
+                    "istep_energy",
+                    "istep_field",
+                    "istep_mom",
+                    "istep_nrg",
+                    "istep_omega",
+                    "istep_schpt",
+                    "istep_vsp",
+                    "kx_center",
+                    "ky0_ind",
+                    "kymin",
+                    "Lref",
+                    "lv",
+                    "lw",
+                    "lx",
+                    "ly",
+                    "magn_geometry",
+                    "major_R",
+                    "mass1",
+                    "minor_r",
+                    "mref",
+                    "n0_global",
+                    "n_fields",
+                    "n_moms",
+                    "n_pol",
+                    "n_procs_s",
+                    "n_procs_sim",
+                    "n_procs_v",
+                    "n_procs_w",
+                    "n_procs_x",
+                    "n_procs_y",
+                    "n_procs_z",
+                    "n_spec",
+                    "name1",
+                    "nblocks",
+                    "nky0",
+                    "nltdt_off",
+                    "nonlinear",
+                    "norm_flux_projection",
+                    "nref",
+                    "nrgcols",
+                    "ntimesteps",
+                    "number of computed time steps",
+                    "nv0",
+                    "nw0",
+                    "nx0",
+                    "nz0",
+                    "Omega0_tor",
+                    "omega_prec",
+                    "omn1",
+                    "OMP_NUM_THREADS",
+                    "omt1",
+                    "passive1",
+                    "perf_vec",
+                    "PRECISION",
+                    "q0",
+                    "read_checkpoint",
+                    "RELEASE",
+                    "rhostar",
+                    "shat",
+                    "sign_Bt_CW",
+                    "sign_Ip_CW",
+                    "simtimelim",
+                    "temp1",
+                    "time for initial value solver",
+                    "timelim",
+                    "timescheme",
+                    "Tref",
+                    "with_bxphi0",
+                    "with_centrifugal",
+                    "with_comoving_other",
+                    "with_coriolis",
+                    "write_checkpoint",
+                    "write_std",
+                    "x0"
+                  ],
+                  "properties": {
+                    "adapt_lx": {
+                      "type": "boolean"
+                    },
+                    "amhd": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "arakawa_zv": {
+                      "type": "boolean"
+                    },
+                    "beta": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "bpar": {
+                      "type": "boolean"
+                    },
+                    "Bref": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "calc_dt": {
+                      "type": "boolean"
+                    },
+                    "charge1": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "$ref": "#/$defs/Double"
+                        }
+                      ]
+                    },
+                    "charge2": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "$ref": "#/$defs/Double"
+                        }
+                      ]
+                    },
+                    "charge3": {
+                      "anyOf": [
+                        {
+                          "type": "integer"
+                        },
+                        {
+                          "$ref": "#/$defs/Double"
+                        }
+                      ]
+                    },
+                    "chpt_in": {
+                      "type": "string"
+                    },
+                    "coll": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "coll_cons_model": {
+                      "type": "string"
+                    },
+                    "coll_order": {
+                      "type": "string"
+                    },
+                    "collision_op": {
+                      "type": "string"
+                    },
+                    "comp_type": {
+                      "type": "string"
+                    },
+                    "debye2": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "delta": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "dens1": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "dens2": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "dens3": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "diag_Blev(0)": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "diag_trap_levels": {
+                      "type": "integer"
+                    },
+                    "diagdir": {
+                      "type": "string"
+                    },
+                    "dpdx_pm": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "dpdx_term": {
+                      "type": "string"
+                    },
+                    "drR": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "dt_max": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "dt_vlasov": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "edge_opt": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "ENDIANNESS": {
+                      "type": "string"
+                    },
+                    "ev_coll": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "ev_coll_est": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "ExBrate": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "geomfile": {
+                      "type": "string"
+                    },
+                    "GIT_BRANCH": {
+                      "type": "string"
+                    },
+                    "GIT_MASTER": {
+                      "type": "string"
+                    },
+                    "hyp_v": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "hyp_v_with_dv_prefactor": {
+                      "type": "boolean"
+                    },
+                    "hyp_z": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "hyp_z_with_dz_prefactor": {
+                      "type": "boolean"
+                    },
+                    "hypz_compensation": {
+                      "type": "boolean"
+                    },
+                    "hypz_opt": {
+                      "type": "boolean"
+                    },
+                    "init_aux_x": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "init_aux_y": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "init_cond": {
+                      "type": "string"
+                    },
+                    "init_time": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "is_bsg": {
+                      "type": "boolean"
+                    },
+                    "istep_energy": {
+                      "type": "integer"
+                    },
+                    "istep_energy3d": {
+                      "type": "integer"
+                    },
+                    "istep_field": {
+                      "type": "integer"
+                    },
+                    "istep_mom": {
+                      "type": "integer"
+                    },
+                    "istep_nrg": {
+                      "type": "integer"
+                    },
+                    "istep_omega": {
+                      "type": "integer"
+                    },
+                    "istep_schpt": {
+                      "type": "integer"
+                    },
+                    "istep_vsp": {
+                      "type": "integer"
+                    },
+                    "iterdb_file": {
+                      "type": "string"
+                    },
+                    "kappa": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "kx_center": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "ky0_ind": {
+                      "type": "integer"
+                    },
+                    "kymin": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "Lref": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "lv": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "lw": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "lx": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "ly": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "mag_prof": {
+                      "type": "boolean"
+                    },
+                    "magn_geometry": {
+                      "type": "string"
+                    },
+                    "major_R": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "mass1": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "mass2": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "mass3": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "minor_r": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "mref": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "n0_global": {
+                      "type": "integer"
+                    },
+                    "n_fields": {
+                      "type": "integer"
+                    },
+                    "n_moms": {
+                      "type": "integer"
+                    },
+                    "n_parallel_sims": {
+                      "type": "integer"
+                    },
+                    "n_pol": {
+                      "type": "integer"
+                    },
+                    "n_procs_s": {
+                      "type": "integer"
+                    },
+                    "n_procs_sim": {
+                      "type": "integer"
+                    },
+                    "n_procs_v": {
+                      "type": "integer"
+                    },
+                    "n_procs_w": {
+                      "type": "integer"
+                    },
+                    "n_procs_x": {
+                      "type": "integer"
+                    },
+                    "n_procs_y": {
+                      "type": "integer"
+                    },
+                    "n_procs_z": {
+                      "type": "integer"
+                    },
+                    "n_spec": {
+                      "type": "integer"
+                    },
+                    "name1": {
+                      "type": "string"
+                    },
+                    "name2": {
+                      "type": "string"
+                    },
+                    "name3": {
+                      "type": "string"
+                    },
+                    "nblocks": {
+                      "type": "integer"
+                    },
+                    "nexc": {
+                      "type": "integer"
+                    },
+                    "nky0": {
+                      "type": "integer"
+                    },
+                    "nltdt_off": {
+                      "type": "boolean"
+                    },
+                    "nonlinear": {
+                      "type": "boolean"
+                    },
+                    "norm_flux_projection": {
+                      "type": "boolean"
+                    },
+                    "nref": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "nrgcols": {
+                      "type": "integer"
+                    },
+                    "ntimesteps": {
+                      "type": "integer"
+                    },
+                    "nu_ei": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "number of computed time steps": {
+                      "type": "integer"
+                    },
+                    "nustar_e": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "nustar_i": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "nv0": {
+                      "type": "integer"
+                    },
+                    "nw0": {
+                      "type": "integer"
+                    },
+                    "nx0": {
+                      "type": "integer"
+                    },
+                    "nz0": {
+                      "type": "integer"
+                    },
+                    "Omega0_tor": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omega_prec": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omegatorref": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omn1": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omn2": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omn3": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "OMP_NUM_THREADS": {
+                      "type": "integer"
+                    },
+                    "omt1": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omt2": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "omt3": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "overflow_limit": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "passive1": {
+                      "type": "boolean"
+                    },
+                    "passive2": {
+                      "type": "boolean"
+                    },
+                    "passive3": {
+                      "type": "boolean"
+                    },
+                    "perf_tsteps": {
+                      "type": "integer"
+                    },
+                    "perf_vec": {
+                      "type": "string"
+                    },
+                    "PRECISION": {
+                      "type": "string"
+                    },
+                    "q0": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "read_checkpoint": {
+                      "type": "boolean"
+                    },
+                    "RELEASE": {
+                      "type": "string"
+                    },
+                    "rhostar": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "s_delta": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "s_kappa": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "s_zeta": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "shat": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "sign_Bt_CW": {
+                      "type": "integer"
+                    },
+                    "sign_Ip_CW": {
+                      "type": "integer"
+                    },
+                    "simtimelim": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "step_time": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "tau": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "temp1": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "temp2": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "temp3": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "time for initial value solver": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "timelim": {
+                      "type": "integer"
+                    },
+                    "timescheme": {
+                      "type": "string"
+                    },
+                    "Tref": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "trpeps": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "underflow_limit": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "with_bxphi0": {
+                      "type": "boolean"
+                    },
+                    "with_centrifugal": {
+                      "type": "boolean"
+                    },
+                    "with_comoving_other": {
+                      "type": "boolean"
+                    },
+                    "with_coriolis": {
+                      "type": "boolean"
+                    },
+                    "write_checkpoint": {
+                      "type": "boolean"
+                    },
+                    "write_h5": {
+                      "type": "boolean"
+                    },
+                    "write_std": {
+                      "type": "boolean"
+                    },
+                    "x0": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "Zeff": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "zeta": {
+                      "$ref": "#/$defs/Double"
+                    }
+                  }
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "repository": {
+              "type": "null"
+            },
+            "version": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "collisions": {
+          "type": "object",
+          "required": [
+            "collisionality_norm"
+          ],
+          "properties": {
+            "collisionality_norm": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/$defs/Double"
+                }
+              }
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "flux_surface": {
+          "type": "object",
+          "required": [
+            "b_field_tor_sign",
+            "dc_dr_minor_norm",
+            "ds_dr_minor_norm",
+            "elongation",
+            "ip_sign",
+            "magnetic_shear_r_minor",
+            "pressure_gradient_norm",
+            "q",
+            "r_minor_norm",
+            "shape_coefficients_c",
+            "shape_coefficients_s"
+          ],
+          "properties": {
+            "b_field_tor_sign": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "$ref": "#/$defs/Double"
+                }
+              ]
+            },
+            "dc_dr_minor_norm": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Double"
+              }
+            },
+            "delongation_dr_minor_norm": {
+              "$ref": "#/$defs/Double"
+            },
+            "dgeometric_axis_r_dr_minor": {
+              "$ref": "#/$defs/Double"
+            },
+            "dgeometric_axis_z_dr_minor": {
+              "$ref": "#/$defs/Double"
+            },
+            "ds_dr_minor_norm": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Double"
+              }
+            },
+            "elongation": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Double"
+                },
+                {
+                  "type": "null"
+                }
+              ]
+            },
+            "ip_sign": {
+              "anyOf": [
+                {
+                  "type": "integer"
+                },
+                {
+                  "$ref": "#/$defs/Double"
+                }
+              ]
+            },
+            "magnetic_shear_r_minor": {
+              "$ref": "#/$defs/Double"
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "pressure_gradient_norm": {
+              "$ref": "#/$defs/Double"
+            },
+            "q": {
+              "$ref": "#/$defs/Double"
+            },
+            "r_minor_norm": {
+              "$ref": "#/$defs/Double"
+            },
+            "shape_coefficients_c": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Double"
+              }
+            },
+            "shape_coefficients_s": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Double"
+              }
+            },
+            "triangularity_lower": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/Double"
+                }
+              ]
+            },
+            "triangularity_upper": {
+              "anyOf": [
+                {
+                  "type": "null"
+                },
+                {
+                  "$ref": "#/$defs/Double"
+                }
+              ]
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "fluxes_integrated_norm": {
+          "type": "array",
+          "items": {
+            "type": []
+          }
+        },
+        "ids_properties": {
+          "type": "object",
+          "required": [
+            "comment"
+          ],
+          "properties": {
+            "comment": {
+              "type": "string"
+            },
+            "creation_date": {
+              "type": "string"
+            },
+            "creator": {
+              "type": "string"
+            },
+            "date": {
+              "type": "string"
+            },
+            "homogeneous_time": {
+              "type": "integer"
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "name": {
+              "type": "string"
+            },
+            "occurrence_type": {
+              "type": "null"
+            },
+            "provenance": {
+              "type": "null"
+            },
+            "provider": {
+              "type": "string"
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "linear": {
+          "type": "object",
+          "required": [
+            "max_repr_length",
+            "version",
+            "wavevector"
+          ],
+          "properties": {
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            },
+            "wavevector": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": [
+                  "binormal_wavevector_norm",
+                  "eigenmode",
+                  "max_repr_length",
+                  "radial_wavevector_norm",
+                  "version"
+                ],
+                "properties": {
+                  "binormal_wavevector_norm": {
+                    "$ref": "#/$defs/Double"
+                  },
+                  "eigenmode": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "required": [
+                        "angle_pol",
+                        "code",
+                        "fields",
+                        "frequency_norm",
+                        "growth_rate_norm",
+                        "growth_rate_tolerance",
+                        "initial_value_run",
+                        "linear_weights",
+                        "linear_weights_rotating_frame",
+                        "max_repr_length",
+                        "moments_norm_gyrocenter",
+                        "moments_norm_gyrocenter_bessel_0",
+                        "moments_norm_gyrocenter_bessel_1",
+                        "moments_norm_particle",
+                        "poloidal_turns",
+                        "time_norm",
+                        "version"
+                      ],
+                      "properties": {
+                        "angle_pol": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/$defs/Double"
+                          }
+                        },
+                        "code": {
+                          "type": "object",
+                          "required": [
+                            "max_repr_length",
+                            "output_flag",
+                            "parameters",
+                            "version"
+                          ],
+                          "properties": {
+                            "max_repr_length": {
+                              "type": "integer"
+                            },
+                            "output_flag": {
+                              "type": "integer"
+                            },
+                            "parameters": {
+                              "type": "string"
+                            },
+                            "version": {
+                              "type": "object",
+                              "required": [
+                                "idspy_internal_version",
+                                "idspy_version",
+                                "imas_dd_git_commit",
+                                "imas_dd_version"
+                              ],
+                              "properties": {
+                                "idspy_internal_version": {
+                                  "type": "string"
+                                },
+                                "idspy_version": {
+                                  "type": "string"
+                                },
+                                "imas_dd_git_commit": {
+                                  "type": "string"
+                                },
+                                "imas_dd_version": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "fields": {
+                          "type": "object",
+                          "required": [
+                            "a_field_parallel_perturbed_norm",
+                            "a_field_parallel_perturbed_parity",
+                            "a_field_parallel_perturbed_weight",
+                            "b_field_parallel_perturbed_norm",
+                            "b_field_parallel_perturbed_parity",
+                            "b_field_parallel_perturbed_weight",
+                            "max_repr_length",
+                            "phi_potential_perturbed_norm",
+                            "phi_potential_perturbed_parity",
+                            "phi_potential_perturbed_weight",
+                            "version"
+                          ],
+                          "properties": {
+                            "a_field_parallel_perturbed_norm": {
+                              "type": "null"
+                            },
+                            "a_field_parallel_perturbed_parity": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "a_field_parallel_perturbed_weight": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "b_field_parallel_perturbed_norm": {
+                              "type": "null"
+                            },
+                            "b_field_parallel_perturbed_parity": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "b_field_parallel_perturbed_weight": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "max_repr_length": {
+                              "type": "integer"
+                            },
+                            "phi_potential_perturbed_norm": {
+                              "type": "null"
+                            },
+                            "phi_potential_perturbed_parity": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "phi_potential_perturbed_weight": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "version": {
+                              "type": "object",
+                              "required": [
+                                "idspy_internal_version",
+                                "idspy_version",
+                                "imas_dd_git_commit",
+                                "imas_dd_version"
+                              ],
+                              "properties": {
+                                "idspy_internal_version": {
+                                  "type": "string"
+                                },
+                                "idspy_version": {
+                                  "type": "string"
+                                },
+                                "imas_dd_git_commit": {
+                                  "type": "string"
+                                },
+                                "imas_dd_version": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "frequency_norm": {
+                          "$ref": "#/$defs/Double"
+                        },
+                        "growth_rate_norm": {
+                          "$ref": "#/$defs/Double"
+                        },
+                        "growth_rate_tolerance": {
+                          "$ref": "#/$defs/Double"
+                        },
+                        "initial_value_run": {
+                          "type": "integer"
+                        },
+                        "linear_weights": {
+                          "type": "object",
+                          "required": [
+                            "energy_a_field_parallel",
+                            "energy_b_field_parallel",
+                            "energy_phi_potential",
+                            "max_repr_length",
+                            "momentum_tor_parallel_a_field_parallel",
+                            "momentum_tor_parallel_b_field_parallel",
+                            "momentum_tor_parallel_phi_potential",
+                            "momentum_tor_perpendicular_a_field_parallel",
+                            "momentum_tor_perpendicular_b_field_parallel",
+                            "momentum_tor_perpendicular_phi_potential",
+                            "particles_a_field_parallel",
+                            "particles_b_field_parallel",
+                            "particles_phi_potential",
+                            "version"
+                          ],
+                          "properties": {
+                            "energy_a_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "energy_b_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "energy_phi_potential": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "max_repr_length": {
+                              "type": "integer"
+                            },
+                            "momentum_tor_parallel_a_field_parallel": {
+                              "$ref": "#/$defs/Double"
+                            },
+                            "momentum_tor_parallel_b_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "momentum_tor_parallel_phi_potential": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "momentum_tor_perpendicular_a_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "momentum_tor_perpendicular_b_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "momentum_tor_perpendicular_phi_potential": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "particles_a_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "particles_b_field_parallel": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "particles_phi_potential": {
+                              "type": "array",
+                              "items": {
+                                "$ref": "#/$defs/Double"
+                              }
+                            },
+                            "version": {
+                              "type": "object",
+                              "required": [
+                                "idspy_internal_version",
+                                "idspy_version",
+                                "imas_dd_git_commit",
+                                "imas_dd_version"
+                              ],
+                              "properties": {
+                                "idspy_internal_version": {
+                                  "type": "string"
+                                },
+                                "idspy_version": {
+                                  "type": "string"
+                                },
+                                "imas_dd_git_commit": {
+                                  "type": "string"
+                                },
+                                "imas_dd_version": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "linear_weights_rotating_frame": {
+                          "type": "null"
+                        },
+                        "max_repr_length": {
+                          "type": "integer"
+                        },
+                        "moments_norm_gyrocenter": {
+                          "type": "null"
+                        },
+                        "moments_norm_gyrocenter_bessel_0": {
+                          "type": "null"
+                        },
+                        "moments_norm_gyrocenter_bessel_1": {
+                          "type": "null"
+                        },
+                        "moments_norm_particle": {
+                          "type": "object",
+                          "required": [
+                            "density",
+                            "heat_flux_parallel",
+                            "j_parallel",
+                            "max_repr_length",
+                            "pressure_parallel",
+                            "pressure_perpendicular",
+                            "v_parallel_energy_perpendicular",
+                            "v_perpendicular_square_energy",
+                            "version"
+                          ],
+                          "properties": {
+                            "density": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "heat_flux_parallel": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "j_parallel": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "max_repr_length": {
+                              "type": "integer"
+                            },
+                            "pressure_parallel": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "pressure_perpendicular": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "v_parallel_energy_perpendicular": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "v_perpendicular_square_energy": {
+                              "type": "array",
+                              "items": {
+                                "type": []
+                              }
+                            },
+                            "version": {
+                              "type": "object",
+                              "required": [
+                                "idspy_internal_version",
+                                "idspy_version",
+                                "imas_dd_git_commit",
+                                "imas_dd_version"
+                              ],
+                              "properties": {
+                                "idspy_internal_version": {
+                                  "type": "string"
+                                },
+                                "idspy_version": {
+                                  "type": "string"
+                                },
+                                "imas_dd_git_commit": {
+                                  "type": "string"
+                                },
+                                "imas_dd_version": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          }
+                        },
+                        "poloidal_turns": {
+                          "type": "integer"
+                        },
+                        "time_norm": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/$defs/Double"
+                          }
+                        },
+                        "version": {
+                          "type": "object",
+                          "required": [
+                            "idspy_internal_version",
+                            "idspy_version",
+                            "imas_dd_git_commit",
+                            "imas_dd_version"
+                          ],
+                          "properties": {
+                            "idspy_internal_version": {
+                              "type": "string"
+                            },
+                            "idspy_version": {
+                              "type": "string"
+                            },
+                            "imas_dd_git_commit": {
+                              "type": "string"
+                            },
+                            "imas_dd_version": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "max_repr_length": {
+                    "type": "integer"
+                  },
+                  "radial_wavevector_norm": {
+                    "$ref": "#/$defs/Double"
+                  },
+                  "version": {
+                    "type": "object",
+                    "required": [
+                      "idspy_internal_version",
+                      "idspy_version",
+                      "imas_dd_git_commit",
+                      "imas_dd_version"
+                    ],
+                    "properties": {
+                      "idspy_internal_version": {
+                        "type": "string"
+                      },
+                      "idspy_version": {
+                        "type": "string"
+                      },
+                      "imas_dd_git_commit": {
+                        "type": "string"
+                      },
+                      "imas_dd_version": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "max_repr_length": {
+          "type": "integer"
+        },
+        "model": {
+          "type": "object",
+          "required": [
+            "include_a_field_parallel",
+            "include_b_field_parallel",
+            "include_centrifugal_effects",
+            "include_full_curvature_drift"
+          ],
+          "properties": {
+            "adiabatic_electrons": {
+              "type": "null"
+            },
+            "collision_ei_only": {
+              "type": "boolean"
+            },
+            "collision_energy_conservation": {
+              "type": "boolean"
+            },
+            "collision_finite_larmor_radius": {
+              "type": "boolean"
+            },
+            "collision_momentum_conservation": {
+              "type": "boolean"
+            },
+            "collision_pitch_only": {
+              "type": "boolean"
+            },
+            "collisions_energy_conservation": {
+              "type": "null"
+            },
+            "collisions_finite_larmor_radius": {
+              "type": "null"
+            },
+            "collisions_momentum_conservation": {
+              "type": "null"
+            },
+            "collisions_pitch_only": {
+              "type": "null"
+            },
+            "include_a_field_parallel": {
+              "type": [
+                "boolean",
+                "integer"
+              ]
+            },
+            "include_b_field_parallel": {
+              "type": [
+                "boolean",
+                "integer"
+              ]
+            },
+            "include_centrifugal_effects": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "include_coriolis_drift": {
+              "type": "null"
+            },
+            "include_full_curvature_drift": {
+              "type": [
+                "boolean",
+                "null"
+              ]
+            },
+            "initial_value_run": {
+              "type": "boolean"
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "non_linear_run": {
+              "type": "boolean"
+            },
+            "time_interval_norm": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "non_linear": {
+          "type": "object",
+          "required": [
+            "angle_pol",
+            "binormal_wavevector_norm",
+            "code",
+            "fields_4d",
+            "fields_intensity_1d",
+            "fields_intensity_2d_surface_average",
+            "fields_intensity_3d",
+            "fields_zonal_2d",
+            "fluxes_1d",
+            "fluxes_1d_rotating_frame",
+            "fluxes_2d_k_x_k_y_sum",
+            "fluxes_2d_k_x_k_y_sum_rotating_frame",
+            "fluxes_2d_k_x_sum",
+            "fluxes_2d_k_x_sum_rotating_frame",
+            "fluxes_3d",
+            "fluxes_3d_rotating_frame",
+            "fluxes_4d",
+            "fluxes_4d_rotating_frame",
+            "fluxes_5d",
+            "fluxes_5d_rotating_frame",
+            "max_repr_length",
+            "quasi_linear",
+            "radial_wavevector_norm",
+            "time_interval_norm",
+            "time_norm",
+            "version"
+          ],
+          "properties": {
+            "angle_pol": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "binormal_wavevector_norm": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "code": {
+              "type": "object",
+              "required": [
+                "max_repr_length",
+                "output_flag",
+                "parameters",
+                "version"
+              ],
+              "properties": {
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "output_flag": {
+                  "type": "integer"
+                },
+                "parameters": {
+                  "type": "string"
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fields_4d": {
+              "type": "object",
+              "required": [
+                "a_field_parallel_perturbed_norm",
+                "b_field_parallel_perturbed_norm",
+                "max_repr_length",
+                "phi_potential_perturbed_norm",
+                "version"
+              ],
+              "properties": {
+                "a_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "b_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "phi_potential_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fields_intensity_1d": {
+              "type": "object",
+              "required": [
+                "a_field_parallel_perturbed_norm",
+                "b_field_parallel_perturbed_norm",
+                "max_repr_length",
+                "phi_potential_perturbed_norm",
+                "version"
+              ],
+              "properties": {
+                "a_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "b_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "phi_potential_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fields_intensity_2d_surface_average": {
+              "type": "object",
+              "required": [
+                "a_field_parallel_perturbed_norm",
+                "b_field_parallel_perturbed_norm",
+                "max_repr_length",
+                "phi_potential_perturbed_norm",
+                "version"
+              ],
+              "properties": {
+                "a_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "b_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "phi_potential_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fields_intensity_3d": {
+              "type": "object",
+              "required": [
+                "a_field_parallel_perturbed_norm",
+                "b_field_parallel_perturbed_norm",
+                "max_repr_length",
+                "phi_potential_perturbed_norm",
+                "version"
+              ],
+              "properties": {
+                "a_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "b_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "phi_potential_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fields_zonal_2d": {
+              "type": "object",
+              "required": [
+                "a_field_parallel_perturbed_norm",
+                "b_field_parallel_perturbed_norm",
+                "max_repr_length",
+                "phi_potential_perturbed_norm",
+                "version"
+              ],
+              "properties": {
+                "a_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "b_field_parallel_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "phi_potential_perturbed_norm": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_1d": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_1d_rotating_frame": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_2d_k_x_k_y_sum": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_2d_k_x_k_y_sum_rotating_frame": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_2d_k_x_sum": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_2d_k_x_sum_rotating_frame": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_3d": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_3d_rotating_frame": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_4d": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_4d_rotating_frame": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_5d": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "fluxes_5d_rotating_frame": {
+              "type": "object",
+              "required": [
+                "energy_a_field_parallel",
+                "energy_b_field_parallel",
+                "energy_phi_potential",
+                "max_repr_length",
+                "momentum_tor_parallel_a_field_parallel",
+                "momentum_tor_parallel_b_field_parallel",
+                "momentum_tor_parallel_phi_potential",
+                "momentum_tor_perpendicular_a_field_parallel",
+                "momentum_tor_perpendicular_b_field_parallel",
+                "momentum_tor_perpendicular_phi_potential",
+                "particles_a_field_parallel",
+                "particles_b_field_parallel",
+                "particles_phi_potential",
+                "version"
+              ],
+              "properties": {
+                "energy_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "energy_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "max_repr_length": {
+                  "type": "integer"
+                },
+                "momentum_tor_parallel_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_parallel_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "momentum_tor_perpendicular_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_a_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_b_field_parallel": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "particles_phi_potential": {
+                  "type": "array",
+                  "items": {
+                    "type": []
+                  }
+                },
+                "version": {
+                  "type": "object",
+                  "required": [
+                    "idspy_internal_version",
+                    "idspy_version",
+                    "imas_dd_git_commit",
+                    "imas_dd_version"
+                  ],
+                  "properties": {
+                    "idspy_internal_version": {
+                      "type": "string"
+                    },
+                    "idspy_version": {
+                      "type": "string"
+                    },
+                    "imas_dd_git_commit": {
+                      "type": "string"
+                    },
+                    "imas_dd_version": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "quasi_linear": {
+              "type": "integer"
+            },
+            "radial_wavevector_norm": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "time_interval_norm": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "time_norm": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "normalizing_quantities": {
+          "type": "object",
+          "required": [
+            "b_field_tor",
+            "max_repr_length",
+            "n_e",
+            "r",
+            "t_e",
+            "version"
+          ],
+          "properties": {
+            "b_field_tor": {
+              "$ref": "#/$defs/Double"
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "n_e": {
+              "$ref": "#/$defs/Double"
+            },
+            "r": {
+              "$ref": "#/$defs/Double"
+            },
+            "t_e": {
+              "$ref": "#/$defs/Double"
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "species": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "charge_norm",
+              "density_log_gradient_norm",
+              "density_norm",
+              "mass_norm",
+              "temperature_log_gradient_norm",
+              "temperature_norm",
+              "velocity_tor_gradient_norm"
+            ],
+            "properties": {
+              "charge_norm": {
+                "anyOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "$ref": "#/$defs/Double"
+                  }
+                ]
+              },
+              "density_log_gradient_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "density_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "mass_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "max_repr_length": {
+                "type": "integer"
+              },
+              "name": {
+                "type": "string"
+              },
+              "potential_energy_gradient_norm": {
+                "type": "null"
+              },
+              "potential_energy_norm": {
+                "type": "null"
+              },
+              "temperature_log_gradient_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "temperature_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "velocity_tor_gradient_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "version": {
+                "type": "object",
+                "required": [
+                  "idspy_internal_version",
+                  "idspy_version",
+                  "imas_dd_git_commit",
+                  "imas_dd_version"
+                ],
+                "properties": {
+                  "idspy_internal_version": {
+                    "type": "string"
+                  },
+                  "idspy_version": {
+                    "type": "string"
+                  },
+                  "imas_dd_git_commit": {
+                    "type": "string"
+                  },
+                  "imas_dd_version": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "species_all": {
+          "type": "object",
+          "required": [
+            "beta_reference",
+            "shearing_rate_norm",
+            "velocity_tor_norm"
+          ],
+          "properties": {
+            "angle_pol": {
+              "type": "array",
+              "items": {
+                "$ref": "#/$defs/Double"
+              }
+            },
+            "beta_reference": {
+              "$ref": "#/$defs/Double"
+            },
+            "debye_length_norm": {
+              "$ref": "#/$defs/Double"
+            },
+            "debye_length_reference": {
+              "$ref": "#/$defs/Double"
+            },
+            "max_repr_length": {
+              "type": "integer"
+            },
+            "shearing_rate_norm": {
+              "$ref": "#/$defs/Double"
+            },
+            "velocity_tor_norm": {
+              "$ref": "#/$defs/Double"
+            },
+            "version": {
+              "type": "object",
+              "required": [
+                "idspy_internal_version",
+                "idspy_version",
+                "imas_dd_git_commit",
+                "imas_dd_version"
+              ],
+              "properties": {
+                "idspy_internal_version": {
+                  "type": "string"
+                },
+                "idspy_version": {
+                  "type": "string"
+                },
+                "imas_dd_git_commit": {
+                  "type": "string"
+                },
+                "imas_dd_version": {
+                  "type": "string"
+                }
+              }
+            },
+            "zeff": {
+              "type": "null"
+            }
+          }
+        },
+        "time": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/Double"
+          }
+        },
+        "version": {
+          "type": "object",
+          "required": [
+            "idspy_internal_version",
+            "idspy_version",
+            "imas_dd_git_commit",
+            "imas_dd_version"
+          ],
+          "properties": {
+            "idspy_internal_version": {
+              "type": "string"
+            },
+            "idspy_version": {
+              "type": "string"
+            },
+            "imas_dd_git_commit": {
+              "type": "string"
+            },
+            "imas_dd_version": {
+              "type": "string"
+            }
+          }
+        },
+        "wavevector": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": [
+              "binormal_component_norm",
+              "eigenmode",
+              "poloidal_turns",
+              "radial_component_norm"
+            ],
+            "properties": {
+              "binormal_component_norm": {
+                "$ref": "#/$defs/Double"
+              },
+              "eigenmode": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "required": [
+                    "fluxes_norm",
+                    "frequency_norm",
+                    "growth_rate_norm",
+                    "growth_rate_tolerance",
+                    "moments_norm_rotating_frame",
+                    "phi_potential_perturbed_norm_imaginary",
+                    "phi_potential_perturbed_norm_real",
+                    "poloidal_angle"
+                  ],
+                  "properties": {
+                    "a_field_parallel_perturbed_norm_imaginary": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    },
+                    "a_field_parallel_perturbed_norm_real": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    },
+                    "b_field_parallel_perturbed_norm_imaginary": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    },
+                    "b_field_parallel_perturbed_norm_real": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    },
+                    "fluxes_norm": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "energy_a_field_parallel",
+                          "energy_b_field_parallel",
+                          "energy_phi_potential",
+                          "momentum_tor_parallel_a_field_parallel",
+                          "momentum_tor_parallel_b_field_parallel",
+                          "momentum_tor_parallel_phi_potential",
+                          "momentum_tor_perpendicular_a_field_parallel",
+                          "momentum_tor_perpendicular_b_field_parallel",
+                          "momentum_tor_perpendicular_phi_potential",
+                          "particles_a_field_parallel",
+                          "particles_b_field_parallel",
+                          "particles_phi_potential"
+                        ],
+                        "properties": {
+                          "energy_a_field_parallel": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "energy_b_field_parallel": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "energy_phi_potential": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "momentum_tor_parallel_a_field_parallel": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "momentum_tor_parallel_b_field_parallel": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "momentum_tor_parallel_phi_potential": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "momentum_tor_perpendicular_a_field_parallel": {
+                            "type": "null"
+                          },
+                          "momentum_tor_perpendicular_b_field_parallel": {
+                            "type": "null"
+                          },
+                          "momentum_tor_perpendicular_phi_potential": {
+                            "type": "null"
+                          },
+                          "particles_a_field_parallel": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "particles_b_field_parallel": {
+                            "$ref": "#/$defs/Double"
+                          },
+                          "particles_phi_potential": {
+                            "$ref": "#/$defs/Double"
+                          }
+                        }
+                      }
+                    },
+                    "frequency_norm": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "growth_rate_norm": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "growth_rate_tolerance": {
+                      "$ref": "#/$defs/Double"
+                    },
+                    "moments_norm_rotating_frame": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "required": [
+                          "density_imaginary",
+                          "density_real",
+                          "temperature_parallel_imaginary",
+                          "temperature_parallel_real",
+                          "temperature_perpendicular_imaginary",
+                          "temperature_perpendicular_real",
+                          "velocity_parallel_imaginary",
+                          "velocity_parallel_real"
+                        ],
+                        "properties": {
+                          "density_imaginary": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "density_real": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "temperature_parallel_imaginary": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "temperature_parallel_real": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "temperature_perpendicular_imaginary": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "temperature_perpendicular_real": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "velocity_parallel_imaginary": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          },
+                          "velocity_parallel_real": {
+                            "type": "array",
+                            "items": {
+                              "$ref": "#/$defs/Double"
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "phi_potential_perturbed_norm_imaginary": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    },
+                    "phi_potential_perturbed_norm_real": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    },
+                    "poloidal_angle": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/$defs/Double"
+                      }
+                    }
+                  }
+                }
+              },
+              "poloidal_turns": {
+                "type": "integer"
+              },
+              "radial_component_norm": {
+                "$ref": "#/$defs/Double"
+              }
+            }
+          }
+        }
+      }
+    },
+    "Metadata": {
+      "type": "object",
+      "required": [
+        "CodeTag",
+        "DBtag",
+        "Publications",
+        "ScenarioTag"
+      ],
+      "properties": {
+        "CodeTag": {
+          "type": "object",
+          "required": [
+            "execution_date",
+            "git_hash",
+            "Has1DFluxes",
+            "IsLinear",
+            "platform",
+            "quasi_linear",
+            "sim_type",
+            "workflow_type"
+          ],
+          "properties": {
+            "execution_date": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "git_hash": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "Has1DFluxes": {
+              "type": [
+                "null",
+                "boolean"
+              ]
+            },
+            "IsLinear": {
+              "type": "boolean"
+            },
+            "platform": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "quasi_linear": {
+              "type": "boolean"
+            },
+            "sim_type": {
+              "type": "string"
+            },
+            "workflow_type": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        },
+        "DBtag": {
+          "type": "object",
+          "required": [
+            "archiveLocation",
+            "comments",
+            "confidence",
+            "keywords",
+            "last_updated",
+            "linkedObjectID",
+            "run_collection_name",
+            "run_suffix",
+            "time_uploaded",
+            "user"
+          ],
+          "properties": {
+            "archiveLocation": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "comments": {
+              "type": "string"
+            },
+            "confidence": {
+              "anyOf": [
+                {
+                  "$ref": "#/$defs/Double"
+                },
+                {
+                  "type": "integer"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "IsRestart": {
+              "type": "object",
+              "required": [
+                "InitObjectId",
+                "restart",
+                "Timestep"
+              ],
+              "properties": {
+                "InitObjectId": {
+                  "type": "null"
+                },
+                "restart": {
+                  "type": "boolean"
+                },
+                "Timestep": {
+                  "type": "integer"
+                }
+              }
+            },
+            "keywords": {
+              "anyOf": [
+                {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "last_updated": {
+              "type": "string"
+            },
+            "linkedObjectID": {
+              "type": "null"
+            },
+            "run_collection_name": {
+              "type": "string"
+            },
+            "run_suffix": {
+              "type": "string"
+            },
+            "time_uploaded": {
+              "type": "string"
+            },
+            "user": {
+              "type": "string"
+            }
+          }
+        },
+        "Publications": {
+          "type": "object",
+          "required": [
+            "doi"
+          ],
+          "properties": {
+            "doi": {
+              "type": "array",
+              "items": {
+                "type": []
+              }
+            }
+          }
+        },
+        "ScenarioTag": {
+          "type": "object",
+          "required": [
+            "Name of actual of hypothetical experiment",
+            "scenario_runid"
+          ],
+          "properties": {
+            "Name of actual of hypothetical experiment": {
+              "type": [
+                "null",
+                "string"
+              ]
+            },
+            "scenario_runid": {
+              "type": [
+                "null",
+                "string"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Plots": {
+      "type": "object",
+      "required": [],
+      "properties": {
+        "AmplitudeSpectra": {
+          "type": "string"
+        },
+        "FluxSpectra_b_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_B_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_C_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_carbon_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_e_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_electrons_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_electrons_Pes": {
+          "type": "string"
+        },
+        "FluxSpectra_i_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_ions_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_ions_Pes": {
+          "type": "string"
+        },
+        "FluxSpectra_z_Pem": {
+          "type": "string"
+        },
+        "FluxSpectra_z_Pes": {
+          "type": "string"
+        },
+        "ShearingRate_Map": {
+          "type": "string"
+        },
+        "ShearingRate_Radial": {
+          "type": "string"
+        },
+        "ShearingRate_TimeTraces": {
+          "type": "string"
+        },
+        "ShearingRate_ZonalSpectra": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "ObjectId": {
+      "type": "object",
+      "properties": {
+        "$oid": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{24}$"
+        }
+      },
+      "required": [
+        "$oid"
+      ],
+      "additionalProperties": false
+    },
+    "Double": {
+      "oneOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "$numberDouble": {
+              "enum": [
+                "Infinity",
+                "-Infinity",
+                "NaN"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
